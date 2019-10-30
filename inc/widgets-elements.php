@@ -34,10 +34,10 @@ class footer_widget extends WP_Widget{
     
         <h4><?php echo $instance['title']; ?></h4>
         <ul class="alt">
-            <li><a href="#"><?php echo $instance['text_o']; ?></a></li>
-            <li><a href="#"><?php echo $instance['text_tw']; ?></a></li>
-            <li><a href="#"><?php echo $instance['text_th']; ?></a></li>
-            <li><a href="#"><?php echo $instance['text_f']; ?></a></li>
+            <li><a href="#"><?php echo wp_kses($instance['text_o'],''); ?></a></li>
+            <li><a href="#"><?php echo wp_kses($instance['text_tw'],''); ?></a></li>
+            <li><a href="#"><?php echo wp_kses($instance['text_th'],''); ?></a></li>
+            <li><a href="#"><?php echo wp_kses($instance['text_f'],''); ?></a></li>
         </ul>
     
     <?php
@@ -149,9 +149,9 @@ class social_widget extends WP_Widget{
 
 		<h4><?php echo $instance['titlee']; ?></h4>
 		<ul class="plain">
-			<li><a href="#"><i class="icon <?php echo $instance['f_icon_class']; ?>">&nbsp;</i><?php echo $instance['f_icon_name']; ?></a></li>
-			<li><a href="#"><i class="icon <?php echo $instance['s_icon_class']; ?>">&nbsp;</i><?php echo $instance['s_icon_name']; ?></a></li>
-			<li><a href="#"><i class="icon <?php echo $instance['t_icon_class']; ?>">&nbsp;</i><?php echo $instance['t_icon_name']; ?></a></li>
+			<li><a href="#"><i class="icon <?php echo wp_kses($instance['f_icon_class'],''); ?>">&nbsp;</i><?php echo $instance['f_icon_name']; ?></a></li>
+			<li><a href="#"><i class="icon <?php echo wp_kses($instance['s_icon_class'],''); ?>">&nbsp;</i><?php echo $instance['s_icon_name']; ?></a></li>
+			<li><a href="#"><i class="icon <?php echo wp_kses($instance['t_icon_class'],''); ?>">&nbsp;</i><?php echo $instance['t_icon_name']; ?></a></li>
 		</ul>
    
     <?php
